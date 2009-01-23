@@ -14,7 +14,13 @@ date: January 22, 2009
 
 \section{Introduction}
 
+Today we calculated the quiz 0 correctly on the board, then did the problem 1
+(problem 1 in the book) and 2 (problem 5 in the book) below and finally did the
+quiz 1 (problem 8 in the book just with different numbers).
+
 \section{Problem 1}
+
+That is the problem 1 in the section 2.1 in the book.
 
 A tank holds 1000 gallons of water, which drains from the bottom of the tank in
 half an hour. The values in the table show the volume V of water remaining in
@@ -65,5 +71,47 @@ $$m={\Delta y\over\Delta x}$$. Ideally you should also get something around
 -33.
 \end{enumerate}
 
+\section{Problem 2}
+
+This is the problem 5 in the section 2.1 in the book.
+
+If a ball is thrown into the air with a velocity of $40\rm\,ft/s$, its height
+in feet after $t$ seconds is given by $y=40t-16t^2$.
+\begin{enumerate}
+\item Find the average velocity for the time period beginning at $t_1=2$ and
+ending at
+\begin{enumerate}
+\item $t_2=2.5\rm\,s$
+\item $t_2=2.1\rm\,s$
+\item $t_2=2.05\rm\,s$
+\item $t_2=2.01\rm\,s$
+\end{enumerate}
+\item Find the instantaneous velocity when $t=2$.
+\end{enumerate}
+
+\subsection*{Solution}
+
+See the solution to the quiz 1 (the other pdf from the web), where I did a
+thorough explanation of everything. So let's just calculate:
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item $v={y(2.5)-y(2)\over
+2.5-2}={(40\cdot2.5-16\cdot2.5^2)-(40\cdot2-16\cdot2^2)\over 0.5}=-32$
+\item $v={y(2.1)-y(2)\over 2.1-2}=-25.6$
+\item $v={y(2.05)-y(2)\over 2.05-2}=-24.8$
+\item $v={y(2.01)-y(2)\over 2.01-2}=-24.16$
+\end{enumerate}
+\item A guess would be that the instantaneous velocity is $v=-24$ (see the
+solution to the Quiz 1 for an explanation). But surely
+we can do better than guessing, so once we learn how to differentiate in a week
+or two, then we can calculate the instantaneous velocity right away for any $t$:
+$$v(t) = {\d y\over\d t} = 40-32t$$
+and in particular for $t=2$ we get:
+$$v(2) = 40-32\cdot2 = -24$$
+That is an exact value and it's very quick, no need for the tedious
+calculations and guessing above, but the price for that is that one needs to
+learn a bit of calculus.
+\end{enumerate}
 
 \end{document}
