@@ -27,20 +27,43 @@ V(gal) & 694 & 444 & 250 & 111 & 28 & 0 \\
 \hline
 \end{tabular}
 
-a) If P is the point (15, 250) on the graph of V, find the
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\renewcommand{\labelenumii}{(\roman{enumii})}
+\begin{enumerate}
+\item If P is the point (15, 250) on the graph of V, find the
 slopes of the secant lines PQ when Q is the point on the
 graph with $t = 5, 10, 20, 25$, and 30.
 
-b) Estimate the slope of the tangent line at P by averaging
+\item Estimate the slope of the tangent line at P by averaging
 the slopes of two secant lines.
 
-c) Use a graph of the function to estimate the slope of the tangent line at P.
-(This slope represents the rate at which the water is flowing from the tank
+\item Use a graph of the function to estimate the slope of the tangent line at
+P.  (This slope represents the rate at which the water is flowing from the tank
 after 15 minutes.)
+\end{enumerate}
 
 \subsection*{Solution}
 
-For $t=5$, 
+\begin{enumerate}
+\item
+For $t=5$, we get $Q(5, 694)$ and
+$$m_{PQ}={V_2-V_1\over t_2-t_1}={250-694\over 15-5}=-{444\over10}=-44.4$$
+For $t=10$, we get $Q(10, 444)$ and
+$$m_{PQ}={V_2-V_1\over t_2-t_1}={250-444\over 15-10}=-38.8$$
+For $t=20$, we get $Q(20, 111)$ and
+$$m_{PQ}={V_2-V_1\over t_2-t_1}={250-111\over 15-20}=-27.8$$
+For $t=25$, we get $Q(25, 28)$ and
+$$m_{PQ}={V_2-V_1\over t_2-t_1}={250-28\over 15-25}=-22.2$$
+For $t=30$, we get $Q(30, 0)$ and
+$$m_{PQ}={V_2-V_1\over t_2-t_1}={250-0\over 15-30}=-16.6$$
+\item We would be averaging the secant lines that are close to the tangent
+line, in particular the ones for $t=10$ and $t=20$, i.e.
+$$m = {-38.8+(-27.8)\over 2} =-33.3$$ 
+\item You just need to plot the graph and the tangent line, then you read the
+"$\Delta y$" and "$\Delta x$" from the graph and estimate the slope as
+$$m={\Delta y\over\Delta x}$$. Ideally you should also get something around
+-33.
+\end{enumerate}
 
 
 \end{document}
