@@ -1,0 +1,100 @@
+\documentclass[10pt]{article}
+\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+
+\input macros
+
+\begin{document}
+
+\noindent TA: Ondřej Čertík\\
+web: \url{http://hpfem.math.unr.edu/~ondrej/}\\
+class: MATH 181\\
+date: January 22, 2009
+
+\section*{Quiz 1}
+
+\subsection*{Problem}
+
+The position of a car is given by the values in the table.
+
+\begin{tabular}{|l||c|c|c|c|c|c|}
+\hline
+t (seconds) & 0   & 1  & 2  & 3  & 4 & 5 \\ \hline
+s (meters) & 0 & 5 & 20 & 45 & 80 & 125 \\
+\hline
+\end{tabular}
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\renewcommand{\labelenumii}{(\roman{enumii})}
+\begin{enumerate}
+\item
+Find the average velocity for the time period beginning at $t_1 = 2\rm\,s$ and
+ending at
+\begin{enumerate}
+\item $t_2=5\rm\,s$
+\item $t_2=4\rm\,s$
+\item $t_2=3\rm\,s$
+\end{enumerate}
+
+\item
+Use the numbers in (a) to estimate the instantaneous velocity when
+$t=2\rm\,s$.
+\end{enumerate}
+
+\section*{Solution}
+
+Note: this is a problem 8., section 2.1., just with different numbers.
+
+Average velocity is defined as the distance traveled, divided by the time
+period for which we traveled:
+$$v={\Delta s\over\Delta t}$$
+More precisely, in our case the average velocity between the times $t_1$ and
+$t_2$ is:
+$$v_{t_1t_2} = {s(t_2)-s(t_1)\over t_2-t_1}$$
+Where $s(t)$ is a function, that gives us the dependency of the distance
+traveled on the time. $s(t_2)$ is then a function $s(t)$ evaluated at a point
+$t=t_2$, e.g. in particular if $t_2=5\rm\,s$, then $s(t_2)$ is just a number
+$s(5)$ that can be read from the table above to be $125\rm\,m$. The function
+notation (syntax) above is important, so one needs to get used to it. If it
+sounds a bit confusing though at the beginning, we can rewrite the above formula in couple different
+equivalent ways:
+$$v_{t_1t_2} = {s_{t_2}-s_{t_1}\over t_2-t_1}$$
+or:
+$$v_{t_1t_2} = {s_2-s_1\over t_2-t_1}$$
+It's just a notation and all the three formulas are equivalent and they express
+the same thing, they tell us which numbers to take and how to plug them in the
+expression, no less, no more.
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item $$v_{t_1t_2} = {s(t_2)-s(t_1)\over t_2-t_1}={125-20\over5-2}=
+{105\over3}=35$$
+\item $$v_{t_1t_2} = {s(t_2)-s(t_1)\over t_2-t_1}={80-20\over4-2}=
+{60\over2}=30$$
+\item $$v_{t_1t_2} = {s(t_2)-s(t_1)\over t_2-t_1}={45-20\over3-2}=
+{25\over1}=25$$
+\end{enumerate}
+\item Instantaneous velocity is equal to the average velocity if the time
+interval goes to zero. Looking at the numbers above, we see that for the time
+interval $3\rm\,s$ the average velocity is 35 ($\rm m\over s$), for the
+interval $2\rm\,s$ it is 30 and for $1\rm\,s$ it is 25. So the best guess is
+that the instantaneous velocity would be around $v=20\rm\,{m\over s}$.
+\end{enumerate}
+
+\subsection*{Better solution to the part b)}
+
+The solution above is the best we can do with our current knowledge, but surely
+we can do better than just guess. One way to do that would be to find a
+continuous function that passes through all the points in the table, thus
+allowing us to calculate the instantaneous velocity with any precision we want.
+One such function is:
+$$s(t) = {1\over 2}\cdot10\cdot t^2$$
+(Verify that it indeed generates the table above.) The instantaneous velocity at
+any time is then given by:
+$$v(t) = {\d s\over\d t} = 10t$$
+In particular for $t=2$ we get
+$$v(2) = 10\cdot 2 = 20$$
+We'll be learning that in a week or two.
+
+\end{document}
