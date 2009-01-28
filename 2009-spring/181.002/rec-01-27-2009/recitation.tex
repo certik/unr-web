@@ -10,108 +10,41 @@
 \noindent TA: Ondřej Čertík\\
 web: \url{http://hpfem.math.unr.edu/~ondrej/}\\
 class: MATH 181\\
-date: January 22, 2009
+date: January 27, 2009
 
 \section{Introduction}
 
-Today we calculated the quiz 0 correctly on the board, then did the problem 1
-(problem 1 in the book) and 2 (problem 5 in the book) below and finally did the
-quiz 1 (problem 8 in the book just with different numbers).
+Today I explained the function notation $s(t)$, see the solution of the quiz 1.
 
 \section{Problem 1}
 
-That is the problem 1 in the section 2.1 in the book.
+That is the problem 11 in the section 2.2 in the book.
 
-A tank holds 1000 gallons of water, which drains from the bottom of the tank in
-half an hour. The values in the table show the volume V of water remaining in
-the tank (in gallons) after t minutes.
+$$g(x)={x-1\over x^3-1}$$
+Estimate the limit:
+$$\lim_{x\to1}g(x)$$
 
-\begin{tabular}{|l||c|c|c|c|c|c|}
+We calculate the table:
+
+\begin{tabular}{|l||c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-t(min) & 5   & 10  & 15  & 20  & 25 & 30 \\ \hline
-V(gal) & 694 & 444 & 250 & 111 & 28 & 0 \\
+x & 0.2 & 0.4 & 0.6 & 0.8 & 0.9 & 0.99 & 1.8 & 1.6 & 1.4 & 1.2 & 1.1 & 1.01 \\ \hline
+g(x) & 0.80 & 0.64 & 0.51 & 0.41 & 0.37 & 0.3367 & 0.16 & 0.19 & 0.22 & 0.27 & 0.30 & 0.3300\\
 \hline
 \end{tabular}
-
-\renewcommand{\labelenumi}{(\alph{enumi})}
-\renewcommand{\labelenumii}{(\roman{enumii})}
-\begin{enumerate}
-\item If P is the point (15, 250) on the graph of V, find the
-slopes of the secant lines PQ when Q is the point on the
-graph with $t = 5, 10, 20, 25$, and 30.
-
-\item Estimate the slope of the tangent line at P by averaging
-the slopes of two secant lines.
-
-\item Use a graph of the function to estimate the slope of the tangent line at
-P.  (This slope represents the rate at which the water is flowing from the tank
-after 15 minutes.)
-\end{enumerate}
-
-\subsection*{Solution}
-
-\begin{enumerate}
-\item
-For $t=5$, we get $Q(5, 694)$ and
-$$m_{PQ}={V_2-V_1\over t_2-t_1}={250-694\over 15-5}=-{444\over10}=-44.4$$
-For $t=10$, we get $Q(10, 444)$ and
-$$m_{PQ}={V_2-V_1\over t_2-t_1}={250-444\over 15-10}=-38.8$$
-For $t=20$, we get $Q(20, 111)$ and
-$$m_{PQ}={V_2-V_1\over t_2-t_1}={250-111\over 15-20}=-27.8$$
-For $t=25$, we get $Q(25, 28)$ and
-$$m_{PQ}={V_2-V_1\over t_2-t_1}={250-28\over 15-25}=-22.2$$
-For $t=30$, we get $Q(30, 0)$ and
-$$m_{PQ}={V_2-V_1\over t_2-t_1}={250-0\over 15-30}=-16.6$$
-\item We would be averaging the secant lines that are close to the tangent
-line, in particular the ones for $t=10$ and $t=20$, i.e.
-$$m = {-38.8+(-27.8)\over 2} =-33.3$$ 
-\item You just need to plot the graph and the tangent line, then you read the
-"$\Delta y$" and "$\Delta x$" from the graph and estimate the slope as
-$$m={\Delta y\over\Delta x}$$. Ideally you should also get something around
--33.
-\end{enumerate}
+And we can see, that for $x\to1$, the $g(x)$ is approaching to something like
+$0.33$, e.g. our guess would be that the limit is equal to $1\over 3$. We can
+also calculate that exactly:
+$$\lim_{x\to1}g(x)=\lim_{x\to1}{x-1\over (x-1)(x^2+x+1)}=\lim_{x\to1}{1\over x^2+x+1}={1\over3}$$
 
 \section{Problem 2}
 
-This is the problem 5 in the section 2.1 in the book.
+We did a problem 9, section 2.2. See the solution of the quiz 2 for a solution
+(just the numbers are different.
 
-If a ball is thrown into the air with a velocity of $40\rm\,ft/s$, its height
-in feet after $t$ seconds is given by $y=40t-16t^2$.
-\begin{enumerate}
-\item Find the average velocity for the time period beginning at $t_1=2$ and
-ending at
-\begin{enumerate}
-\item $t_2=2.5\rm\,s$
-\item $t_2=2.1\rm\,s$
-\item $t_2=2.05\rm\,s$
-\item $t_2=2.01\rm\,s$
-\end{enumerate}
-\item Find the instantaneous velocity when $t=2$.
-\end{enumerate}
+\section{Problem 3}
 
-\subsection*{Solution}
-
-See the solution to the quiz 1 (the other pdf from the web), where I did a
-thorough explanation of everything. So let's just calculate:
-\begin{enumerate}
-\item
-\begin{enumerate}
-\item $v={y(2.5)-y(2)\over
-2.5-2}={(40\cdot2.5-16\cdot2.5^2)-(40\cdot2-16\cdot2^2)\over 0.5}=-32$
-\item $v={y(2.1)-y(2)\over 2.1-2}=-25.6$
-\item $v={y(2.05)-y(2)\over 2.05-2}=-24.8$
-\item $v={y(2.01)-y(2)\over 2.01-2}=-24.16$
-\end{enumerate}
-\item A guess would be that the instantaneous velocity is $v=-24$ (see the
-solution to the Quiz 1 for an explanation). But surely
-we can do better than guessing, so once we learn how to differentiate in a week
-or two, then we can calculate the instantaneous velocity right away for any $t$:
-$$v(t) = {\d y\over\d t} = 40-32t$$
-and in particular for $t=2$ we get:
-$$v(2) = 40-32\cdot2 = -24$$
-That is an exact value and it's very quick, no need for the tedious
-calculations and guessing above, but the price for that is that one needs to
-learn a bit of calculus.
-\end{enumerate}
+$$\lim_{x\to2}{x^2+x-6\over x-2}=\lim_{x\to2}{(x+3)(x-2)\over x-2} =
+\lim_{x\to2} x+ 3 = 5$$
 
 \end{document}
