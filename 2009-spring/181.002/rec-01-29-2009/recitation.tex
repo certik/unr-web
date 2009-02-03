@@ -45,7 +45,20 @@ Solution: The logarithm $\ln x$ is defined only for $x>0$. We want the
 logarithm to be real, e.g. $\ln(-1)$ is not defined. Otherwise, if you remember
 complex numbers, logarithm can be defined for any (complex) number $z=\rho
 e^{i\theta}$ as $\ln \rho e^{i\theta} = \ln\rho+i\theta$ and it depends on the
-branch cut (you can add any number of $2\pi$ to $\theta$).
+branch cut (you can add any number of $2\pi$ to $\theta$). Anyway, so we need
+to determine for which $t$ the expression $t^4-1>0$. There are many ways to do
+that, for example we can factor it out: $t^4-1 = (t^2+1)(t^2-1) =
+(t^2+1)(t+1)(t-1)>0$, but $t^2+1$ is always positive, so we get:
+$$(t+1)(t-1) = t^2-1 >0$$
+We can either determine $t$ from the left hand side, or just draw a graph of
+$t^2-1$, which is just a parabola shifted down by 1. In any case, we get
+$$t\in (-\infty, -1) \cup (1, \infty)$$
+Which is also the domain of $G(t)$.
+
+How about the continuity? Every polynomial is continuous and $\ln x$ is
+continuous for all $x>0$, so $G(t)$ which is a composition of a logarithm and a
+polynomial, is continuous for all $t$ from its domain, e.g. for all
+$t\in (-\infty, -1) \cup (1, \infty)$.
 
 \section{Quizzes}
 
