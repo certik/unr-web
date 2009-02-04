@@ -14,58 +14,64 @@
 \noindent TA: Ondřej Čertík\\
 web: \url{http://hpfem.math.unr.edu/~ondrej/}\\
 class: MATH 181\\
-date: January 29, 2009
+date: February 3, 2009
 
-\section*{Quiz 4}
+\section*{Quiz 5 \& 6}
 
 \subsection*{Problem 1}
 
-Given a function $f(x)$:
-$$f(x) = \cases{{x^2-x-6\over x-3}, &if $x\ne3$;\cr
-                4, &if $x=3$.\cr}$$
+Calculate the limit:
+$$\lim_{x\to\infty}\left(\sqrt{4x^2+x}-2x\right)$$
 
-\begin{enumerate}
-\item Sketch the graph of the function
-\item Is the function continuous at the point $x=3$? Why?
-\end{enumerate}
+\subsection*{Problem 2}
 
-\section*{Solution to Problem 1}
+$$y=x^2$$
+calculate the slope of the tangent line at the point $x=a$.
 
-\begin{enumerate}
-\item
-We first rewrite the expression for $x\ne3$ into a simpler form, so that we can
-sketch the graph:
+\section*{Solution to the Problem 1}
 
-$$f(x) = \cases{{x^2-x-6\over x-3}, &if $x\ne3$;\cr
-                4, &if $x=3$.\cr}=
-\cases{{(x-3)(x+2)\over x-3}, &if $x\ne3$;\cr
-                4, &if $x=3$.\cr}=
-\cases{{x+2}, &if $x\ne3$;\cr
-                4, &if $x=3$.\cr}$$
+$$\lim_{x\to\infty}\left(\sqrt{4x^2+x}-2x\right)=
+\lim_{x\to\infty}\left(\sqrt{4x^2+x}-2x\right)
+{\sqrt{4x^2+x}+2x\over\sqrt{4x^2+x}+2x}=
+\lim_{x\to\infty}{(4x^2+x)-4x^2
+\over\sqrt{4x^2+x}+2x}=
+$$
+$$
+=
+\lim_{x\to\infty}{x\over\sqrt{4x^2+x}+2x}=
+\lim_{x\to\infty}{1\over{\sqrt{4x^2+x}\over x}+2}=
+\lim_{x\to\infty}{1\over{\sqrt{4+{1\over x}}+2}}=
+{1\over{\sqrt{4}+2}}={1\over4}
+$$
 
-Now we can sketch the graph:
+\section*{Solution to the Problem 2}
 
-\includegraphics{diag1.pdf}
-
-\item
-The definition of a continuity at the point $x=3$ is:
-$$\lim_{x\to3}f(x) = f(3)$$
-If the equation holds, the function is continuous, if it doesn't, it is
-discontinuous. In our case $f(3) = 4$ and
-$$\lim_{x\to3}f(x) = \lim_{x\to3}x+2 = 5$$
-so
-$\lim_{x\to3}f(x) \ne f(3)$ and the function is not continuous at the point
-$x=3$.
-
-
-\end{enumerate}
+$$m = \lim_{h\to0}{y(a+h)-y(a)\over h}=
+\lim_{h\to0}{(a+h)^2-a^2\over h}=
+\lim_{h\to0}{2ah +O(h^2)\over h}=
+\lim_{h\to0}\left({2a +O(h)}\right)=2a
+$$
 
 \subsection*{Grading}
 
-You got 4 points for rewriting:
-$$f(x)=\cases{{x+2}, &if $x\ne3$;\cr
-                4, &if $x=3$,\cr}$$
-2 points for graphing the function and 4 points for correctly
-determinning the continuity including the reasoning why.
+Problem 1: you got 4 points for arriving at:
+$$\lim_{x\to\infty}{x\over\sqrt{4x^2+x}+2x}$$
+4 points for arriving at:
+$$\lim_{x\to\infty}{1\over{\sqrt{4+{1\over x}}+2}}$$
+and 2 points for getting the correct answer $1\over4$.
+
+Problem 2: you got 2 points for:
+$$m = \lim_{h\to0}{y(a+h)-y(a)\over h}$$
+Two points for:
+$$
+\lim_{h\to0}{(a+h)^2-a^2\over h}
+$$
+Two points for
+$$
+\lim_{h\to0}{2ah +O(h^2)\over h}
+$$
+Two points for:
+$$ \lim_{h\to0}\left({2a +O(h)}\right)$$
+and two points for getting the correct answer $2a$.
 
 \end{document}
