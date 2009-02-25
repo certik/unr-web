@@ -1,0 +1,64 @@
+\documentclass[10pt]{article}
+\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{graphicx}
+%\renewcommand{\labelenumi}{(\alph{enumi})}
+%\renewcommand{\labelenumii}{(\roman{enumii})}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\input macros
+
+\begin{document}
+
+\noindent TA: Ondřej Čertík\\
+web: \url{http://hpfem.math.unr.edu/~ondrej/}\\
+class: MATH 181\\
+date: February 5, 2009
+
+\section*{Quiz 7}
+
+\subsection*{Problem 1}
+
+Given the function $G(x)=x^2+6x-1$, calculate $G'(1)$ and find the equation of
+the tangent line at the point $P(1, G(1)) = P(1, 6)$.
+
+\section*{Solution to the Problem 1}
+
+Derivative:
+$$G'(1)
+=\lim_{h\to0}{G(1+h)-G(1)\over h}
+=\lim_{h\to0}{[(1+h)^2+6(1+h)-1]-[1^2+6\cdot1-1]\over h}
+=\lim_{h\to0}{8h+h^2\over h}
+=\lim_{h\to0}(8+h)
+=8$$
+Tangent line:
+$$G'(1) = {y-y_1\over x-x_1}$$
+$$8 = {y-6\over x-1}$$
+So:
+$$y=8x-2$$
+
+\subsection*{Grading}
+
+2 points for
+$$G'(1)
+=\lim_{h\to0}{G(1+h)-G(1)\over h}
+$$
+1 point for
+$$
+\lim_{h\to0}{[(1+h)^2+6(1+h)-1]-[1^2+6\cdot1-1]\over h}
+$$
+2 points for:
+$$
+=\lim_{h\to0}{8h+h^2\over h}
+=\lim_{h\to0}(8+h)
+$$
+1 point for:
+$$=8$$
+2 points for
+$$G'(1) = {y-y_1\over x-x_1}$$
+$$8 = {y-6\over x-1}$$
+and 2 points for getting the final answer:
+$$y=8x-2$$
+
+\end{document}

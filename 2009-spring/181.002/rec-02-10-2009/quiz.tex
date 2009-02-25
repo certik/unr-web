@@ -1,0 +1,65 @@
+\documentclass[10pt]{article}
+\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{graphicx}
+%\renewcommand{\labelenumi}{(\alph{enumi})}
+%\renewcommand{\labelenumii}{(\roman{enumii})}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\input macros
+
+\begin{document}
+
+\noindent TA: Ondřej Čertík\\
+web: \url{http://hpfem.math.unr.edu/~ondrej/}\\
+class: MATH 181\\
+date: February 10, 2009
+
+\section*{Quiz 8 \& 9}
+
+\subsection*{Problem 1}
+
+Calculate the derivative of the function $f(x) = \sqrt{1-3x}$.
+
+\subsection*{Problem 2}
+
+Calculate the derivative of the function $f(x) = \sqrt{2+x}$.
+
+\section*{Solution to the Problem 1}
+
+$$f'(a)
+= \lim_{x\to a}{f(x)-f(a)\over x-a}
+= \lim_{x\to a}{\sqrt{1-3x}-\sqrt{1-3a}\over x-a}
+= \lim_{x\to a}{\sqrt{1-3x}-\sqrt{1-3a}\over x-a}
+    {\sqrt{1-3x}+\sqrt{1-3a}\over\sqrt{1-3x}+\sqrt{1-3a}}
+$$
+$$
+= \lim_{x\to a}{(1-3x)-(1-3a)\over (x-a)(\sqrt{1-3x}+\sqrt{1-3a})}
+= \lim_{x\to a}{-3(x-a)\over (x-a)(\sqrt{1-3x}+\sqrt{1-3a})}
+$$
+$$
+= \lim_{x\to a}-{3\over\sqrt{1-3x}+\sqrt{1-3a}}
+= -{3\over\sqrt{1-3a}+\sqrt{1-3a}}
+= -{3\over2\sqrt{1-3a}}
+$$
+
+\section*{Solution to the Problem 2}
+
+$$f'(a)
+= \lim_{x\to a}{f(x)-f(a)\over x-a}
+= \lim_{x\to a}{\sqrt{2+x}-\sqrt{2+a}\over x-a}
+= \lim_{x\to a}{\sqrt{2+x}-\sqrt{2+a}\over x-a}
+    {\sqrt{2+x}+\sqrt{2+a}\over\sqrt{2+x}+\sqrt{2+a}}
+$$
+$$
+= \lim_{x\to a}{(2+x)-(2+a)\over (x-a)(\sqrt{2+x}+\sqrt{2+a})}
+= \lim_{x\to a}{(x-a)\over (x-a)(\sqrt{2+x}+\sqrt{2+a})}
+$$
+$$
+= \lim_{x\to a}{1\over\sqrt{2+x}+\sqrt{2+a}}
+= {1\over\sqrt{2+a}+\sqrt{2+a}}
+= {1\over2\sqrt{2+a}}
+$$
+
+\end{document}
