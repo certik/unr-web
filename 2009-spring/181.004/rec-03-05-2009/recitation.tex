@@ -1,0 +1,51 @@
+\documentclass[10pt]{article}
+\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+
+\input macros
+
+\begin{document}
+
+\noindent TA: Ondřej Čertík\\
+web: \url{http://hpfem.math.unr.edu/~ondrej/}\\
+class: MATH 181\\
+date: February 24, 2009
+
+\section{Introduction}
+
+We did retakes, then problems from the section 3.2, so a product rule and a
+quotient rule.
+
+\section{Problem}
+
+Interesting problem is page 192, prob. 54a).
+
+Find equations of both lines through the point $(2, -3)$ that are tangent to
+the parabola $y=x^2+x$.
+
+Solution:
+
+The slope of a tangent line at a point $x=x_0$ is:
+$$m(x_0) = y'(x_0) = 2x_0+1$$
+So the equation of the tangent line (passing through the point $(2, -3)$) at the point $x=x_0$ is:
+$$m(x_0) = {y-y_1\over x-x_1} = {y-(-3)\over x-2}$$
+$$2x_0 +1 = {y+3\over x-2}$$
+or:
+$$y = (2x_0+1)(x-2)-3$$
+We still have one unknown in the equation: $x_0$. To determine it, we use the
+fact, that at the point $(x_0, y(x_0)$, the $y$-coordinate coming from both the
+equation of the line and the parabola must be the same, since they both
+intersect at that point, e.g.:
+$$y(x_0) = y(x_0)$$
+$$(2x_0+1)(x_0-2)-3=x_0^2+x_0$$
+Solving this yields two solutions, $x_0 = 5$ and $x_0 = -1$. So the equations
+of the two tangent lines are:
+$$y = (2\cdot 5+1)(x-2)-3 = 11x-25$$
+$$y = (2\cdot (-1)+1)(x-2)-3 = -x-1$$
+
+\section{Quizzes}
+
+The Quiz 11 is a hometake, due Thursday.
+
+\end{document}
