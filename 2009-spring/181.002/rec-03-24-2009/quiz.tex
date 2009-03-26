@@ -1,0 +1,36 @@
+\documentclass[10pt]{article}
+\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{graphicx}
+%\renewcommand{\labelenumi}{(\alph{enumi})}
+%\renewcommand{\labelenumii}{(\roman{enumii})}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\input macros
+
+\begin{document}
+
+\noindent TA: Ondřej Čertík\\
+web: \url{http://hpfem.math.unr.edu/~ondrej/}\\
+class: MATH 181\\
+date: March 24, 2009
+
+\section*{Quiz 17}
+
+\subsection*{Problem}
+
+$$z^3 = \sin x + y^4$$
+Find ${\d z\over \d t}$ if ${\d x\over \d t}=1$, ${\d y\over \d t}={1\over4}$,
+$x=0$, $y=1$.
+
+\subsection*{Solution}
+
+$$3z^2z' = (\cos x) x'+4y^3y'$$
+$$z' = {1\over 3z^2} ( (\cos x) x'+4y^3)={1\cdot 1+4\cdot1^3\cdot{1\over4}
+\over3z^2}={2\over 3z^2}={2\over 3}$$
+
+Because $z^3 = \sin 0 + 1^4 = 1$, so the only solution is $z=1$.
+
+
+\end{document}
