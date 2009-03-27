@@ -1,0 +1,149 @@
+\documentclass[10pt]{article}
+\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+
+\input macros
+
+\begin{document}
+
+\noindent TA: Ondřej Čertík\\
+web: \url{http://hpfem.math.unr.edu/~ondrej/}\\
+class: MATH 181\\
+date: March 26, 2009
+
+\section{Introduction}
+
+Today we did some hard and involved problems from the section 4.1 and then a
+preview of the section 4.2 plus a home take quiz.
+
+\section{Problem 1}
+
+It's 4.1, problem 31.
+
+If two resistors with resistances $R_1$ and $R_2$ are connected in parallel, as
+in the figure, then the total resistance $R$, measured in ohms ($\Omega$), is
+given by
+$$
+{1\over R} = {1\over R_1} + {1\over R_2}
+$$
+If $R_1$ and $R_2$ are increasing at rates of
+$0.3\rm\,{\Omega\over s}$
+and
+$0.2\rm\,{\Omega\over s}$,
+respectively, how fast is $R$ changing when $R_1=80\Omega$ and $R_2=100\Omega$?
+
+\subsection*{Answer}
+
+We express $R$:
+$$R = {R_1R_2\over R_1+R_2}$$
+and differentiate with respect to $t$:
+$$R' =
+{(R_1R_2)'(R_1+R_2) - R_1R_2(R_1+R_2)'\over (R_1+R_2)^2}=
+{(R_1'R_2+R_1R_2')(R_1+R_2) - R_1R_2(R_1'+R_2')\over (R_1+R_2)^2}
+$$
+Now we can substitute the values for $R_1$, $R_2$,
+${\d R_1\over \d t}=0.3\rm\,{\Omega\over s}$
+and
+${\d R_2\over \d t}=0.2\rm\,{\Omega\over s}$:
+$$R'=
+{(0.3\cdot 100+80\cdot0.2)(80+100) - 80\cdot100(0.3+0.2)\over (80+100)^2}
+{\rm\Omega\over s}
+=
+{107\over810}
+{\rm\Omega\over s}
+\doteq
+0.132
+{\rm\,\Omega\over s}
+$$
+
+\section{Problem 2}
+
+It's 4.1, problem 37.
+
+A runner sprints around a circular track of radius $100\rm\,m$ at a constant
+speed of $7\rm\,{m\over s}$. The runner's friend is standing at a distance
+$200\rm\,m$ from the center of the track. How fast is the distance between the
+friends changing when the distance between them is $200\rm\,m$?
+
+\subsection*{Answer}
+
+Let the position of the runner be $(x, y)
+= (r\cos\omega t, r\sin\omega t)
+= (r\cos{v\over r} t, r\sin{v\over r} t)
+$
+where $\omega$ is the angular velocity of the runner and so it follows
+$r\omega=v$. $r=100\rm\,m$ is the radius of the circle. Let $R=200\rm\,m$ be
+the distance between the second friend and the center of the track and $l$ the
+distance between friends. The position of the second friend is then $(0, -R)$
+and the distance is:
+$$l^2 = x^2+(y+R)^2$$
+We want to calculate ${\d l\over\d t}$ at the point $l=200\rm\,m$, so after
+differentiating:
+$$2ll' = 2xx'+2(y+R)y'$$
+thus:
+$$l' ={1\over l}( xx'+(y+R)y')$$
+Then we need to evaluate $x'$ and $y'$, so we differentiate the position of the
+runner:
+$$x = r\cos{v\over r} t$$
+$$y = r\sin{v\over r} t$$
+$$x' = -v\sin{v\over r} t=-v{y\over r}$$
+$$y' = v\cos{v\over r} t=v{x\over r}$$
+and substitute back:
+$$l' =
+{1\over l}( xx'+(y+R)y')=
+{1\over l}( x(-v{y\over r})+(y+R)v{x\over r})=
+{1\over l} Rv{x\over r}
+$$
+Now let's evaluate this derivative at the point $l=200\rm\,m=R$:
+$$l' =
+{1\over l} Rv{x\over r}=
+{1\over R} Rv{x\over r}=
+v{x\over r}
+$$
+Last thing we need to do is to evaluate $x$. There are two solutions:
+$$x = r\cos(\pi+\beta)=r(\cos\pi\cos\beta-\sin\pi\sin\beta)=-r\cos\beta
+$$
+and
+$$x = r\cos(-\beta)=r\cos\beta$$
+so we can write:
+$$x = \pm r\cos\beta$$
+where $\beta$ is the angle between the line $(x, y)$-$(0,0)$ and the horizontal
+line. Looking at the triangle $(x, y)$-$(0, -R)$-$(0, 0)$, we can see that it
+has sides $l$, $l$ and $r$ and the angle between $l$ and $r$ is ${\pi\over
+2}-\beta$, so:
+$$\cos\left({\pi\over 2}-\beta\right)={r\over2l}$$
+hence:
+$$
+\cos\left({\pi\over 2}-\beta\right)=
+\cos{\pi\over 2}\cos\beta+\sin{\pi\over 2}\sin\beta=
+\sin\beta={r\over2l}$$
+now we can calculate $x$:
+$$x = \pm r\cos\beta
+=\pm r\sqrt{1-\sin^2\beta}
+=\pm r\sqrt{1-\left({r\over2l}\right)^2}
+$$
+So the answer is:
+$$l' =
+v{x\over r}=
+v{\pm r\sqrt{1-\left({r\over2l}\right)^2}\over r}=
+\pm v\sqrt{1-\left({r\over2l}\right)^2}
+$$
+Putting in numbers:
+$$l' =
+\pm 7\sqrt{1-\left({100\over2\cdot200}\right)^2}{\rm\,{m\over s}}
+=
+\pm 7{\sqrt{15}\over4}{\rm\,{m\over s}}
+\doteq
+\pm 6.78{\rm\,{m\over s}}
+$$
+
+\section{Problem 3}
+
+Finally we did the problem 37 from the section 4.2.
+
+\section{Quiz}
+
+The Quiz 17 is a hometake, due Tuesday.
+
+\end{document}
